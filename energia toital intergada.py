@@ -20,6 +20,10 @@ intensities = planck_law(wavelengths, T)
 # Integrar para encontrar la energía total emitida en el rango visible
 total_energy = simps(intensities, wavelengths)
 
+# Mostrar la energía total integrada
+print(f"La energía total integrada sobre el rango visible (380 nm a 750 nm) es: {total_energy:.4e} W/m^2")
+print(intensities)
+
 # Visualización del espectro de cuerpo negro
 plt.figure(figsize=(10, 5))
 plt.plot(wavelengths * 1e9, intensities, color='blue', label=f'Temperature = {T}K')
@@ -29,7 +33,3 @@ plt.ylabel('Intensidad (W/m^3)')
 plt.legend()
 plt.grid(True)
 plt.show()
-
-# Mostrar la energía total integrada
-print(f"La energía total integrada sobre el rango visible (380 nm a 750 nm) es: {total_energy:.4e} W/m^2")
-print(intensities)
