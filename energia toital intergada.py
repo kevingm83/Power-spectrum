@@ -22,7 +22,6 @@ total_energy = simps(intensities, wavelengths)
 
 # Mostrar la energía total integrada
 print(f"La energía total integrada sobre el rango visible (380 nm a 750 nm) es: {total_energy:.4e} W/m^2")
-print(intensities)
 
 # Visualización del espectro de cuerpo negro
 plt.figure(figsize=(10, 5))
